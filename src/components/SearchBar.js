@@ -8,7 +8,10 @@ class SearchBar extends React.Component {
   };
 
   onFormSubmit = (event) => {
+    // prevents auto reload after pressing Enter
     event.preventDefault();
+
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
